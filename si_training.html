@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SI Training Syllabus</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #16a34a;
+            --background-color: #f5f7fb;
+            --card-bg: #ffffff;
+            --text-color: #1f2937;
+            --muted-text: #6b7280;
+            --radius: 12px;
+            --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--muted-text);
+            margin-bottom: 30px;
+        }
+
+        .subject-card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+        }
+
+        .subject-name {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .open-btn {
+            text-decoration: none;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .open-btn:hover {
+            background-color: #15803d;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .subject-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .open-btn {
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>SI Training Syllabus</h1>
+        <h2>Subject List</h2>
+
+        <div class="subject-card">
+            <div class="subject-name">(1) General Organization</div>
+            <a href="General_Orgnaization.html" class="open-btn">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <div class="subject-name">(2) Crime on Railways</div>
+            <a href="#" class="open-btn">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <div class="subject-name">(3) Security on Railways</div>
+            <a href="#" class="open-btn">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <div class="subject-name">(4) Constitution of India</div>
+            <a href="constitution_of_india.html" class="open-btn">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <div class="subject-name">(5) Gender Sensitization</div>
+            <a href="#" class="open-btn">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <div class="subject-name">(6) Psychology &amp; Criminology</div>
+            <a href="#" class="open-btn">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <div class="subject-name">(7) Management &amp; Soft Skills</div>
+            <a href="#" class="open-btn">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <div class="subject-name">(8) Disaster Management</div>
+            <a href="Disaster_Management.html" class="open-btn">Open</a>
+        </div>
+        <div class="subject-card">
+            <div class="subject-name">(9) Forensic Science</div>
+            <a href="forensic_science.html" class="open-btn">Open</a>
+        </div>
+        <div class="subject-card">
+            <div class="subject-name">(10) Information & Communication Technology</div>
+            <a href="information_communication.html" class="open-btn">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <div class="subject-name">(11) Railway System</div>
+            <a href="railway_system.html" class="open-btn">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <div class="subject-name">(12) Railway Act</div>
+            <a href="railway_act.html" class="open-btn">Open</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

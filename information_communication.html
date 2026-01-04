@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information & Communication Technology</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent: #f59e0b;
+            --bg: #f1f5f9;
+            --card: #ffffff;
+            --text: #0f172a;
+            --radius: 14px;
+            --shadow: 0 10px 25px rgba(0,0,0,0.07);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -30px auto 60px;
+            padding: 0 20px;
+        }
+
+        .topic-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 22px 26px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 6px solid var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .topic-title {
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .open-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 26px;
+            border-radius: 999px;
+            cursor: pointer;
+        }
+
+        .open-btn:hover { background: #d97706; }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 24px;
+            border-radius: 14px;
+            width: 90%;
+            max-width: 420px;
+            animation: scaleIn .25s ease;
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-content h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .modal-links a {
+            display: block;
+            padding: 10px 14px;
+            margin-bottom: 10px;
+            background: var(--bg);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .modal-links a:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .close-btn {
+            margin-top: 14px;
+            background: #e5e7eb;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 999px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header class="page-header">
+    <h1>Information & Communication Technology</h1>
+</header>
+
+<main class="container">
+
+    <div class="topic-card">
+        <div class="topic-title">(a) Basic Computer</div>
+        <button class="open-btn" onclick="openModal('precisModal')">Open</button>
+    </div>
+
+    <!-- <div class="topic-card">
+        <div class="topic-title">(b) RPF Post Working</div>
+        <button class="open-btn" onclick="openModal('preambleModal')">Open</button>
+    </div>
+
+    <div class="topic-card">
+        <div class="topic-title">(c) Module on office Procedure</div>
+        <button class="open-btn" onclick="openModal('frModal')">Open</button>
+    </div>
+
+    <div class="topic-card">
+        <div class="topic-title">(d) Module On Quarter Master Cell</div>
+        <button class="open-btn" onclick="openModal('dpModal')">Open</button>
+    </div> -->
+</main>
+
+<!-- Precis -->
+<div class="modal" id="precisModal">
+    <div class="modal-content">
+        <h3>Precis</h3>
+        <div class="modal-links">
+            <a href="Basic Computer\Precis\Basis_Computer_Precis.html">Precis</a>
+            <a href="Basic Computer\Hands on Exercise\Basic_Computer_Hands-on.html">Hands-on Exercises</a>
+        </div>
+        <button class="close-btn" onclick="closeModal('precisModal')">Close</button>
+    </div>
+</div>
+
+
+<!-- Preamble -->
+<!-- <div class="modal" id="preambleModal">
+    <div class="modal-content">
+        <h3>Case Study</h3>
+        <div class="modal-links">
+            <a href="Forensic Science\Case study\Balasore accident\Samjhauta-Express-Blast-2007_CaseStudy_Forensic-Science.html">Balasore Accident</a>
+            <a href="Forensic Science\Case study\Samjhauta Express Blast, 2007\Samjhauta-Express-Blast-2007_CaseStudy_ForensicScience.html">Samjhauta Express Blast 2007</a>
+
+        </div>
+        <button class="close-btn" onclick="closeModal('preambleModal')">Close</button>
+    </div>
+</div> -->
+
+
+<!-- Fundamental Rights -->
+<!-- <div class="modal" id="frModal">
+    <div class="modal-content">
+        <h3>Flipped Classroom</h3>
+        <div class="modal-links">
+            <a href="Forensic Science\Flipped class room exercise\Drugging- Flipped Classroom\Drugging-Flipped-Classroom.html">Drugging</a>
+        </div>
+        <button class="close-btn" onclick="closeModal('frModal')">Close</button>
+    </div>
+</div> -->
+
+
+<!-- DPSP
+<div class="modal" id="dpModal">
+    <div class="modal-content">
+        <h3>Role Play</h3>
+        <div class="modal-links">
+            <a href="Forensic Science\Role Play\Role Play Railway Parcel Theft InvestigationEnquiry\Role-Play-Railway-Parcel-Theft-InvestigationEnquiry.html">Railway Parcel Theft Investigation/Enquiry </a>
+            <a href="Forensic Science\Role Play\Role Play Railway Run-Over Case Investigation Inquiry\Role-Play-Railway-Run-Over-Case-Investigation-Inquiry.html">Runover Case Investigation/Inquiry</a>
+        </div>
+        <button class="close-btn" onclick="closeModal('dpModal')">Close</button>
+    </div>
+</div> -->
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "flex";
+    }
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+    }
+</script>
+
+</body>
+</html>
